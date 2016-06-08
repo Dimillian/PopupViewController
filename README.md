@@ -1,5 +1,4 @@
 # PopupViewController
-[![Build Status](https://travis-ci.org/Dimillian/PopupViewController.svg?branch=master)](https://travis-ci.org/Dimillian/PopupViewController)
 
 `UIAlertController` drop in replacement with much more customization
 
