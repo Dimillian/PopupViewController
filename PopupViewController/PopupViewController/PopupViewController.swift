@@ -90,10 +90,10 @@ public class PopupViewController: UIViewController, UIViewControllerTransitionin
         public var titleColor = UIColor.redColor()
         public var messageFont = UIFont.systemFontOfSize(15.0)
         public var messageColor = UIColor.whiteColor()
-        public var actionFont = UIFont.systemFontOfSize(15)
-        public var actionColor = UIColor.whiteColor()
-        public var boldActionFont = UIFont.boldSystemFontOfSize(15)
-        public var boldActionColor = UIColor.whiteColor()
+        public var postiveActionFont = UIFont.systemFontOfSize(15)
+        public var positiveActionColor = UIColor.whiteColor()
+        public var negativeActionFont = UIFont.boldSystemFontOfSize(15)
+        public var negativeActionColor = UIColor.whiteColor()
         public var actionsSeparatorColor = UIColor.darkGrayColor()
         public var alertBorderColor = UIColor.darkGrayColor()
         public var actionsHighlightColor = UIColor.lightGrayColor()
@@ -384,12 +384,12 @@ private class PopupAlertButton: UIButton {
 
         switch action.actionType! {
         case .Positive:
-            titleLabel?.font = customizable.actionFont
-            setTitleColor(customizable.actionColor, forState: .Normal)
+            titleLabel?.font = customizable.postiveActionFont
+            setTitleColor(customizable.positiveActionColor, forState: .Normal)
             break
         case .Negative:
-            titleLabel?.font = customizable.boldActionFont
-            setTitleColor(customizable.boldActionColor, forState: .Normal)
+            titleLabel?.font = customizable.negativeActionFont
+            setTitleColor(customizable.negativeActionColor, forState: .Normal)
             break
         }
 

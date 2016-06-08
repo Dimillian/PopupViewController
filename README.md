@@ -22,10 +22,10 @@ Example:
 ``` Swift
   var customizable = PopupViewController.Customizable()
   customizable.titleColor = UIColor.blueColor()
-  customizable.actionColor = UIColor.redColor()
+  customizable.positiveActionColor = UIColor.redColor()
   customizable.messageColor = UIColor.brownColor()
   customizable.messageFont = UIFont.boldSystemFontOfSize(22)
-  customizable.actionColor = UIColor.brownColor()
+  customizable.negativeActionColor = UIColor.brownColor()
   customizable.actionsHighlightColor = UIColor.redColor()
 
   let alert = PopupViewController(title: "Alert title",
@@ -42,6 +42,19 @@ Result:
 
 Yes this is very ugly. But you know...
 
+You can also set a static `Customizable`, it'll be re used if you pass no customizable in the `PopupViewController` constructor.
+
+``` Swift
+  var alertCustomizable = PopupViewController.Customizable()
+  alertCustomizable.titleFont = UIFont.avenirNextBold(17)
+  alertCustomizable.messageFont = UIFont.avenirNextRegular(15)
+  alertCustomizable.messageColor = UIColor.whiteColor()
+  alertCustomizable.alertBorderColor = UIColor.tocDarkSeparatorColor()
+  alertCustomizable.actionsSeparatorColor = UIColor.darkGrayProgressColor()
+  alertCustomizable.actionFont = UIFont.avenirNextRegular(15)
+  alertCustomizable.boldActionFont = UIFont.avenirNextBold(15)
+  PopupViewController.sharedCustomizable = alertCustomizable
+```
 ## Todo
 * [ ] Action Sheet support
 * [ ] UITextFields Support
@@ -49,6 +62,7 @@ Yes this is very ugly. But you know...
 * [ ] Shared Customizable configuration
 * [ ] Remove cartography dependency
 * [ ] Easier custom transition overwrite
+* [ ] Better default transition
 
 ## Installation
 

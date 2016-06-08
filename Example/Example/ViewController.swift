@@ -31,10 +31,10 @@ class ViewController: UIViewController {
     @IBAction func onCustomAlert(sender: AnyObject) {
         var customizable = PopupViewController.Customizable()
         customizable.titleColor = UIColor.blueColor()
-        customizable.actionColor = UIColor.redColor()
+        customizable.positiveActionColor = UIColor.redColor()
         customizable.messageColor = UIColor.brownColor()
         customizable.messageFont = UIFont.boldSystemFontOfSize(22)
-        customizable.actionColor = UIColor.brownColor()
+        customizable.negativeActionColor = UIColor.brownColor()
         customizable.actionsHighlightColor = UIColor.redColor()
 
         let alert = PopupViewController(title: "Alert title",
