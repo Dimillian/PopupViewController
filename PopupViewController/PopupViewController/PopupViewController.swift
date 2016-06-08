@@ -79,6 +79,9 @@ public class PopupViewController: UIViewController, UIViewControllerTransitionin
             blurView.effect = UIBlurEffect(style: blurStyle)
         }
     }
+    
+    /// Default customizable used if you don't pass any. Can be set to a new one too
+    static var sharedCustomizable = Customizable()
 
     /// Init this strict and set any properties to customize your alert view accordingly.
     /// Must be passed in the init parameter.
@@ -111,9 +114,9 @@ public class PopupViewController: UIViewController, UIViewControllerTransitionin
     }(UIVisualEffectView(effect: UIBlurEffect(style: .Dark)))
 
     /// Conveniance init.
-    convenience public init(title: String, message: String, customizable: Customizable? = Customizable()) {
+    convenience public init(title: String, message: String, customizable: Customizable? = PopupViewController.sharedCustomizable) {
         self.init(nibName: nil, bundle: nil)
-
+        
         alertView = PopupAlertView(title: title,
                                    message: message,
                                    customizable: customizable!,
