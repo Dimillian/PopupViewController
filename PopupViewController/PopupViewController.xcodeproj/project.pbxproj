@@ -11,10 +11,26 @@
 		9F9D54941D081D47005B259C /* PopupViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F9D54931D081D47005B259C /* PopupViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F9D549C1D081D74005B259C /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D549B1D081D74005B259C /* PopupViewController.swift */; };
 		9F9D54A61D08236B005B259C /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F9D54A51D08236B005B259C /* Cartography.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		9FA875221D0853F90088A2C4 /* PopupViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA875211D0853F90088A2C4 /* PopupViewControllerTests.swift */; };
+		9FA875241D0853F90088A2C4 /* PopupViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F9D54901D081D47005B259C /* PopupViewController.framework */; };
+		C5369BB1786FF58A33496C47 /* Pods_PopupViewControllerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76F3B9ABA84E8B80161FB125 /* Pods_PopupViewControllerTests.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9FA875251D0853F90088A2C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F9D54871D081D47005B259C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F9D548F1D081D47005B259C;
+			remoteInfo = PopupViewController;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		071E90C5DC37F678DB08D03F /* Pods_PopupViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PopupViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E514BF592D1FAA6020E1FE4 /* Pods-PopupViewControllerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopupViewControllerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PopupViewControllerTests/Pods-PopupViewControllerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		596853969B1CAC6A814E7B40 /* Pods-PopupViewControllerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopupViewControllerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PopupViewControllerTests/Pods-PopupViewControllerTests.release.xcconfig"; sourceTree = "<group>"; };
+		76F3B9ABA84E8B80161FB125 /* Pods_PopupViewControllerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PopupViewControllerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E1F59047AE61CFEC811B114 /* Pods-PopupViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopupViewController.release.xcconfig"; path = "Pods/Target Support Files/Pods-PopupViewController/Pods-PopupViewController.release.xcconfig"; sourceTree = "<group>"; };
 		8DF29EC4BEFD14EC96B15169 /* Pods-PopupViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopupViewController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PopupViewController/Pods-PopupViewController.debug.xcconfig"; sourceTree = "<group>"; };
 		9F9D54901D081D47005B259C /* PopupViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PopupViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +38,9 @@
 		9F9D54951D081D47005B259C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F9D549B1D081D74005B259C /* PopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		9F9D54A51D08236B005B259C /* Cartography.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cartography.framework; path = "Pods/../build/Debug-iphoneos/Cartography/Cartography.framework"; sourceTree = "<group>"; };
+		9FA8751F1D0853F90088A2C4 /* PopupViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopupViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FA875211D0853F90088A2C4 /* PopupViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewControllerTests.swift; sourceTree = "<group>"; };
+		9FA875231D0853F90088A2C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +53,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9FA8751C1D0853F90088A2C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FA875241D0853F90088A2C4 /* PopupViewController.framework in Frameworks */,
+				C5369BB1786FF58A33496C47 /* Pods_PopupViewControllerTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -42,6 +70,8 @@
 			children = (
 				8DF29EC4BEFD14EC96B15169 /* Pods-PopupViewController.debug.xcconfig */,
 				7E1F59047AE61CFEC811B114 /* Pods-PopupViewController.release.xcconfig */,
+				3E514BF592D1FAA6020E1FE4 /* Pods-PopupViewControllerTests.debug.xcconfig */,
+				596853969B1CAC6A814E7B40 /* Pods-PopupViewControllerTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -50,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				9F9D54921D081D47005B259C /* PopupViewController */,
+				9FA875201D0853F90088A2C4 /* PopupViewControllerTests */,
 				9F9D54911D081D47005B259C /* Products */,
 				6BCE1CFDFC0FB43F74F21FE4 /* Pods */,
 				DB76A2AFE8B618C8A2F9A79D /* Frameworks */,
@@ -60,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				9F9D54901D081D47005B259C /* PopupViewController.framework */,
+				9FA8751F1D0853F90088A2C4 /* PopupViewControllerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -74,11 +106,21 @@
 			path = PopupViewController;
 			sourceTree = "<group>";
 		};
+		9FA875201D0853F90088A2C4 /* PopupViewControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				9FA875211D0853F90088A2C4 /* PopupViewControllerTests.swift */,
+				9FA875231D0853F90088A2C4 /* Info.plist */,
+			);
+			path = PopupViewControllerTests;
+			sourceTree = "<group>";
+		};
 		DB76A2AFE8B618C8A2F9A79D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				9F9D54A51D08236B005B259C /* Cartography.framework */,
 				071E90C5DC37F678DB08D03F /* Pods_PopupViewController.framework */,
+				76F3B9ABA84E8B80161FB125 /* Pods_PopupViewControllerTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -101,12 +143,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F9D54981D081D47005B259C /* Build configuration list for PBXNativeTarget "PopupViewController" */;
 			buildPhases = (
-				47A8D0158A95D2E130867862 /* 📦 Check Pods Manifest.lock */,
+				47A8D0158A95D2E130867862 /* [CP] Check Pods Manifest.lock */,
 				9F9D548B1D081D47005B259C /* Sources */,
 				9F9D548C1D081D47005B259C /* Frameworks */,
 				9F9D548D1D081D47005B259C /* Headers */,
 				9F9D548E1D081D47005B259C /* Resources */,
-				AE833F106A17F1B7596C556E /* 📦 Copy Pods Resources */,
+				AE833F106A17F1B7596C556E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -117,16 +159,41 @@
 			productReference = 9F9D54901D081D47005B259C /* PopupViewController.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		9FA8751E1D0853F90088A2C4 /* PopupViewControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FA875291D0853F90088A2C4 /* Build configuration list for PBXNativeTarget "PopupViewControllerTests" */;
+			buildPhases = (
+				D6573A950CBEF649D7BB06F4 /* [CP] Check Pods Manifest.lock */,
+				9FA8751B1D0853F90088A2C4 /* Sources */,
+				9FA8751C1D0853F90088A2C4 /* Frameworks */,
+				9FA8751D1D0853F90088A2C4 /* Resources */,
+				E9D6D446077AC2B5947E4E13 /* [CP] Embed Pods Frameworks */,
+				E27F3AF07F1991479FB35B20 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9FA875261D0853F90088A2C4 /* PBXTargetDependency */,
+			);
+			name = PopupViewControllerTests;
+			productName = PopupViewControllerTests;
+			productReference = 9FA8751F1D0853F90088A2C4 /* PopupViewControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		9F9D54871D081D47005B259C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Thomas Ricouard";
 				TargetAttributes = {
 					9F9D548F1D081D47005B259C = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					9FA8751E1D0853F90088A2C4 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
 				};
@@ -144,6 +211,7 @@
 			projectRoot = "";
 			targets = (
 				9F9D548F1D081D47005B259C /* PopupViewController */,
+				9FA8751E1D0853F90088A2C4 /* PopupViewControllerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -156,17 +224,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9FA8751D1D0853F90088A2C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		47A8D0158A95D2E130867862 /* 📦 Check Pods Manifest.lock */ = {
+		47A8D0158A95D2E130867862 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,19 +249,64 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		AE833F106A17F1B7596C556E /* 📦 Copy Pods Resources */ = {
+		AE833F106A17F1B7596C556E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PopupViewController/Pods-PopupViewController-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6573A950CBEF649D7BB06F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E27F3AF07F1991479FB35B20 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PopupViewControllerTests/Pods-PopupViewControllerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9D6D446077AC2B5947E4E13 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PopupViewControllerTests/Pods-PopupViewControllerTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -200,7 +320,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9FA8751B1D0853F90088A2C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FA875221D0853F90088A2C4 /* PopupViewControllerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9FA875261D0853F90088A2C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F9D548F1D081D47005B259C /* PopupViewController */;
+			targetProxy = 9FA875251D0853F90088A2C4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		9F9D54961D081D47005B259C /* Debug */ = {
@@ -339,6 +475,28 @@
 			};
 			name = Release;
 		};
+		9FA875271D0853F90088A2C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E514BF592D1FAA6020E1FE4 /* Pods-PopupViewControllerTests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = PopupViewControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dimillian.PopupViewControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9FA875281D0853F90088A2C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 596853969B1CAC6A814E7B40 /* Pods-PopupViewControllerTests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = PopupViewControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dimillian.PopupViewControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -356,6 +514,15 @@
 			buildConfigurations = (
 				9F9D54991D081D47005B259C /* Debug */,
 				9F9D549A1D081D47005B259C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FA875291D0853F90088A2C4 /* Build configuration list for PBXNativeTarget "PopupViewControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FA875271D0853F90088A2C4 /* Debug */,
+				9FA875281D0853F90088A2C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

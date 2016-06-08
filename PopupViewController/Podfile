@@ -3,9 +3,11 @@ platform :ios, '9.0'
 workspace '../PopupViewController'
 
 target 'PopupViewController' do
-  # Comment this line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-
   pod 'Cartography'
+end
 
+target 'PopupViewControllerTests' do
+  use_frameworks!
+  pod 'Cartography'
 end
