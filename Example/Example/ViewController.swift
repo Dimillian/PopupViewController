@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
 
     @IBAction func onStandardAlert(sender: AnyObject) {
         let alert = PopupViewController(title: "Alert title", message: "Alert message, which can be very long and etc....")
@@ -32,17 +32,16 @@ class ViewController: UIViewController {
         var customizable = PopupViewController.Customizable()
         customizable.titleColor = UIColor.blueColor()
         customizable.actionColor = UIColor.redColor()
-        customizable.messagecolor = UIColor.brownColor()
+        customizable.messageColor = UIColor.brownColor()
         customizable.messageFont = UIFont.boldSystemFontOfSize(22)
         customizable.actionColor = UIColor.brownColor()
         customizable.actionsHighlightColor = UIColor.redColor()
-        
+
         let alert = PopupViewController(title: "Alert title",
-                                        message: "Aler message, which can be very long message and all that but nobody will ever read it.",
+                                        message: "Alert message, which can be very long message and all that but nobody will ever read it.",
                                         customizable: customizable)
         alert.blurStyle = .ExtraLight
         alert.addAction(PopupAction(title: "Ok", type: .Positive, handler: nil))
         presentViewController(alert, animated: true, completion: nil)
     }
 }
-

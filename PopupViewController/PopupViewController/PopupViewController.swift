@@ -86,7 +86,7 @@ public class PopupViewController: UIViewController, UIViewControllerTransitionin
         public var titleFont = UIFont.systemFontOfSize(17.0)
         public var titleColor = UIColor.redColor()
         public var messageFont = UIFont.systemFontOfSize(15.0)
-        public var messagecolor = UIColor.whiteColor()
+        public var messageColor = UIColor.whiteColor()
         public var actionFont = UIFont.systemFontOfSize(15)
         public var actionColor = UIColor.whiteColor()
         public var boldActionFont = UIFont.boldSystemFontOfSize(15)
@@ -264,7 +264,7 @@ private class PopupAlertView: UIView {
         titleLabel.textColor = customizable.titleColor
         
         messageLabel.font = customizable.messageFont
-        messageLabel.textColor = customizable.messagecolor
+        messageLabel.textColor = customizable.messageColor
         
         layer.masksToBounds = true
         layer.cornerRadius = 6
