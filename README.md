@@ -1,4 +1,6 @@
 # PopupViewController
+[![Build Status](https://travis-ci.org/Dimillian/PopupViewController.svg?branch=master)](https://travis-ci.org/Dimillian/PopupViewController)
+
 `UIAlertController` drop in replacement with much more customization
 
 You can literally replace `UIAlertController` by `PopupViewController` and `UIAlertAction` by `PopupAction` and you're done. Does not support Action Sheet for now, just alert mode.

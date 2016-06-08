@@ -1,9 +1,0 @@
-language: objective-c
-xcode_workspace: PopupViwController.xcworkspace
-podfile:
-  -Example/podfile
-  -PopupViewController/podfile
-xcode_scheme:
-  -Example
-  -PopupViewController
-  -PopupViewControllerTests
