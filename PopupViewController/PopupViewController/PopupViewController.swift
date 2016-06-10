@@ -397,10 +397,12 @@ private class PopupAlertButton: UIButton {
         switch action.actionType! {
         case .Positive:
             titleLabel?.font = customizable.postiveActionFont
+            backgroundColor = customizable.positiveActionBackgroundColor
             setTitleColor(customizable.positiveActionColor, forState: .Normal)
             break
         case .Negative:
             titleLabel?.font = customizable.negativeActionFont
+            backgroundColor = customizable.negativeActionBackgroundColor
             setTitleColor(customizable.negativeActionColor, forState: .Normal)
             break
         }

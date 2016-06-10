@@ -36,6 +36,8 @@ class ViewController: UIViewController {
         customizable.messageFont = UIFont.boldSystemFontOfSize(22)
         customizable.negativeActionColor = UIColor.brownColor()
         customizable.positiveActionColor = UIColor.blueColor()
+        customizable.negativeActionBackgroundColor = UIColor.blackColor()
+        customizable.positiveActionBackgroundColor = UIColor.whiteColor()
         customizable.positiveActionHighlightColor = UIColor.greenColor()
         customizable.negativeActionHighlightColor = UIColor.redColor()
 
