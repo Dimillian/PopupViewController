@@ -92,11 +92,14 @@ public class PopupViewController: UIViewController, UIViewControllerTransitionin
         public var messageColor = UIColor.whiteColor()
         public var postiveActionFont = UIFont.systemFontOfSize(15)
         public var positiveActionColor = UIColor.whiteColor()
+        public var positiveActionBackgroundColor = UIColor.clearColor()
+        public var positiveActionHighlightColor = UIColor.lightGrayColor()
         public var negativeActionFont = UIFont.boldSystemFontOfSize(15)
         public var negativeActionColor = UIColor.whiteColor()
+        public var negativeActionBackgroundColor = UIColor.clearColor()
+        public var negativeActionHighlightColor = UIColor.lightGrayColor()
         public var actionsSeparatorColor = UIColor.darkGrayColor()
         public var alertBorderColor = UIColor.darkGrayColor()
-        public var actionsHighlightColor = UIColor.lightGrayColor()
 
         public init() {
 
@@ -360,7 +363,16 @@ private class PopupAlertButton: UIButton {
     var hightlight = false {
         didSet {
             UIView.animateWithDuration(0.15) {
-                self.backgroundColor = self.hightlight ? self.customizable.actionsHighlightColor : UIColor.clearColor()
+                switch self.action!.actionType! {
+                case .Positive:
+                    self.backgroundColor = self.hightlight ?
+                        self.customizable.positiveActionHighlightColor : self.customizable.positiveActionBackgroundColor
+                    break
+                case .Negative:
+                    self.backgroundColor = self.hightlight ?
+                        self.customizable.negativeActionHighlightColor : self.customizable.negativeActionBackgroundColor
+                    break
+                }
             }
         }
     }

@@ -35,13 +35,16 @@ class ViewController: UIViewController {
         customizable.messageColor = UIColor.brownColor()
         customizable.messageFont = UIFont.boldSystemFontOfSize(22)
         customizable.negativeActionColor = UIColor.brownColor()
-        customizable.actionsHighlightColor = UIColor.redColor()
+        customizable.positiveActionColor = UIColor.blueColor()
+        customizable.positiveActionHighlightColor = UIColor.greenColor()
+        customizable.negativeActionHighlightColor = UIColor.redColor()
 
         let alert = PopupViewController(title: "Alert title",
                                         message: "Alert message, which can be very long message and all that but nobody will ever read it.",
                                         customizable: customizable)
         alert.blurStyle = .ExtraLight
         alert.addAction(PopupAction(title: "Ok", type: .Positive, handler: nil))
+        alert.addAction(PopupAction(title: "Cancel", type: .Negative, handler: nil))
         presentViewController(alert, animated: true, completion: nil)
     }
 }
