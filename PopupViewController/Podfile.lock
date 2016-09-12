@@ -2,21 +2,21 @@ PODS:
   - Cartography (0.5.0)
 
 DEPENDENCIES:
-  - Cartography (from `https://github.com/solomon23/Cartography.git`, branch `3.0`)
+  - Cartography (from `https://github.com/wireapp/Cartography.git`, branch `swift3`)
 
 EXTERNAL SOURCES:
   Cartography:
-    :branch: '3.0'
-    :git: https://github.com/solomon23/Cartography.git
+    :branch: swift3
+    :git: https://github.com/wireapp/Cartography.git
 
 CHECKOUT OPTIONS:
   Cartography:
-    :commit: ee865066dd2ac96f8e504a4bcfb06fe7d6b5ec01
-    :git: https://github.com/solomon23/Cartography.git
+    :commit: 78f81b658950ed2ad68669f883798fe8bbe7a6b4
+    :git: https://github.com/wireapp/Cartography.git
 
 SPEC CHECKSUMS:
   Cartography: de3e85d2fc2d7288a2e7c89e1ac6cad08599d75e
 
-PODFILE CHECKSUM: eba971179b71212e52eb245f74ea623ea1a69b74
+PODFILE CHECKSUM: 67c1e6f7c43d39007f304ab1436cc9522e7019c1
 
 COCOAPODS: 1.0.1

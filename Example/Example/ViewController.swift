@@ -30,16 +30,16 @@ class ViewController: UIViewController {
 
     @IBAction func onCustomAlert(_ sender: AnyObject) {
         var customizable = PopupViewController.Customizable()
-        customizable.titleColor = UIColor.blue()
-        customizable.positiveActionColor = UIColor.red()
-        customizable.messageColor = UIColor.brown()
+        customizable.titleColor = UIColor.blue
+        customizable.positiveActionColor = UIColor.red
+        customizable.messageColor = UIColor.brown
         customizable.messageFont = UIFont.boldSystemFont(ofSize: 22)
-        customizable.negativeActionColor = UIColor.brown()
-        customizable.positiveActionColor = UIColor.blue()
-        customizable.negativeActionBackgroundColor = UIColor.black()
-        customizable.positiveActionBackgroundColor = UIColor.white()
-        customizable.positiveActionHighlightColor = UIColor.green()
-        customizable.negativeActionHighlightColor = UIColor.red()
+        customizable.negativeActionColor = UIColor.brown
+        customizable.positiveActionColor = UIColor.blue
+        customizable.negativeActionBackgroundColor = UIColor.black
+        customizable.positiveActionBackgroundColor = UIColor.white
+        customizable.positiveActionHighlightColor = UIColor.green
+        customizable.negativeActionHighlightColor = UIColor.red
 
         let alert = PopupViewController(title: "Alert title",
                                         message: "Alert message, which can be very long message and all that but nobody will ever read it.",

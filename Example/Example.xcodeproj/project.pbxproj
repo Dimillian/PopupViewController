@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25BBE5A3C20D4110DA157F6E /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F588243DE51DEE3B8BCEF7BA /* Pods_Example.framework */; };
+		9F55610B1D86AAB000610533 /* PopupViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F55610A1D86AAB000610533 /* PopupViewController.framework */; };
+		9F55610C1D86AAB000610533 /* PopupViewController.framework in Copy frameworks */ = {isa = PBXBuildFile; fileRef = 9F55610A1D86AAB000610533 /* PopupViewController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F9D54751D081D12005B259C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D54741D081D12005B259C /* AppDelegate.swift */; };
 		9F9D54771D081D12005B259C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D54761D081D12005B259C /* ViewController.swift */; };
 		9F9D547A1D081D12005B259C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9D54781D081D12005B259C /* Main.storyboard */; };
 		9F9D547C1D081D12005B259C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F9D547B1D081D12005B259C /* Assets.xcassets */; };
 		9F9D547F1D081D12005B259C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9D547D1D081D12005B259C /* LaunchScreen.storyboard */; };
-		9F9D54A41D082241005B259C /* PopupViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F9D54A31D082241005B259C /* PopupViewController.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		9F9D54A71D0824EE005B259C /* PopupViewController.framework in Copy frameworks */ = {isa = PBXBuildFile; fileRef = 9F9D54A31D082241005B259C /* PopupViewController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F9D54B91D0852D8005B259C /* ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D54B81D0852D8005B259C /* ExampleUITests.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,7 +35,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9F9D54A71D0824EE005B259C /* PopupViewController.framework in Copy frameworks */,
+				9F55610C1D86AAB000610533 /* PopupViewController.framework in Copy frameworks */,
 			);
 			name = "Copy frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		161C88F8C97E0B798550212B /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
+		9F55610A1D86AAB000610533 /* PopupViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PopupViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F9D54711D081D12005B259C /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F9D54741D081D12005B259C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F9D54761D081D12005B259C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,7 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F9D54A41D082241005B259C /* PopupViewController.framework in Frameworks */,
+				9F55610B1D86AAB000610533 /* PopupViewController.framework in Frameworks */,
+				25BBE5A3C20D4110DA157F6E /* Pods_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +83,7 @@
 		9F9D54681D081D11005B259C = {
 			isa = PBXGroup;
 			children = (
+				9F55610A1D86AAB000610533 /* PopupViewController.framework */,
 				9F9D54A31D082241005B259C /* PopupViewController.framework */,
 				9F9D54731D081D12005B259C /* Example */,
 				9F9D54B71D0852D8005B259C /* ExampleUITests */,
@@ -191,6 +195,7 @@
 				TargetAttributes = {
 					9F9D54701D081D12005B259C = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = Z6P74P6T99;
 						LastSwiftMigration = 0800;
 					};
 					9F9D54B51D0852D8005B259C = {
@@ -424,8 +429,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A24CE37A0E77BB3AEF80B571 /* Pods-Example.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Z6P74P6T99;
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dimillian.Example;
@@ -438,8 +443,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 161C88F8C97E0B798550212B /* Pods-Example.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Z6P74P6T99;
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dimillian.Example;

@@ -15,7 +15,7 @@ import Cartography
 /**
  Represent an action of a PopupViewController. It have a title, an action handler and a type.
  */
-public class PopupAction {
+open class PopupAction {
 
     public enum ActionType {
         case positive, negative
@@ -32,7 +32,7 @@ public class PopupAction {
     /// The completion handler for when the user trigger the action. The alert will also be dismissed.
     var handler: ((PopupAction) -> Void)?
 
-    private init() {
+    fileprivate init() {
 
     }
 
@@ -54,19 +54,19 @@ public class PopupAction {
 
  You only need to call the covenience init, then add one or more action, then present it using presentViewController.
  */
-public class PopupViewController: UIViewController, UIViewControllerTransitioningDelegate {
+open class PopupViewController: UIViewController, UIViewControllerTransitioningDelegate {
 
     // MARK: Public properties.
 
     /// The title which will be displayed in the alert. Can be modified any time.
-    override public var title: String! {
+    override open var title: String! {
         didSet {
             alertView.titleLabel.text = title
             alertView.setNeedsUpdateConstraints()
         }
     }
     /// The message which will be displayed in the alert. Can be modified any time.
-    public var message: String! {
+    open var message: String! {
         didSet {
             alertView.messageLabel.text = message
             alertView.setNeedsUpdateConstraints()
@@ -74,32 +74,32 @@ public class PopupViewController: UIViewController, UIViewControllerTransitionin
     }
 
     /// Blur style for the alert view, default is Dark.
-    public var blurStyle = UIBlurEffectStyle.dark {
+    open var blurStyle = UIBlurEffectStyle.dark {
         didSet {
             blurView.effect = UIBlurEffect(style: blurStyle)
         }
     }
 
     /// Default customizable used if you don't pass any. Can be set to a new one too
-    static public var sharedCustomizable = Customizable()
+    static open var sharedCustomizable = Customizable()
 
     /// Init this strict and set any properties to customize your alert view accordingly.
     /// Must be passed in the init parameter.
     public struct Customizable {
         public var titleFont = UIFont.systemFont(ofSize: 17.0)
-        public var titleColor = UIColor.red()
+        public var titleColor = UIColor.red
         public var messageFont = UIFont.systemFont(ofSize: 15.0)
-        public var messageColor = UIColor.white()
+        public var messageColor = UIColor.white
         public var postiveActionFont = UIFont.systemFont(ofSize: 15)
-        public var positiveActionColor = UIColor.white()
-        public var positiveActionBackgroundColor = UIColor.clear()
-        public var positiveActionHighlightColor = UIColor.lightGray()
+        public var positiveActionColor = UIColor.white
+        public var positiveActionBackgroundColor = UIColor.clear
+        public var positiveActionHighlightColor = UIColor.lightGray
         public var negativeActionFont = UIFont.boldSystemFont(ofSize: 15)
-        public var negativeActionColor = UIColor.white()
-        public var negativeActionBackgroundColor = UIColor.clear()
-        public var negativeActionHighlightColor = UIColor.lightGray()
-        public var actionsSeparatorColor = UIColor.darkGray()
-        public var alertBorderColor = UIColor.darkGray()
+        public var negativeActionColor = UIColor.white
+        public var negativeActionBackgroundColor = UIColor.clear
+        public var negativeActionHighlightColor = UIColor.lightGray
+        public var actionsSeparatorColor = UIColor.darkGray
+        public var alertBorderColor = UIColor.darkGray
 
         public init() {
 
@@ -107,10 +107,10 @@ public class PopupViewController: UIViewController, UIViewControllerTransitionin
     }
 
     // MARK: Private properties.
-    private var actions: [PopupAction] = []
-    private var alertView: PopupAlertView!
-    private var toVc: UIViewController?
-    private let blurView: UIVisualEffectView = {
+    fileprivate var actions: [PopupAction] = []
+    fileprivate var alertView: PopupAlertView!
+    fileprivate var toVc: UIViewController?
+    fileprivate let blurView: UIVisualEffectView = {
         $0.layer.masksToBounds = true
         $0.layer.cornerRadius = 6
         return $0
@@ -133,17 +133,16 @@ public class PopupViewController: UIViewController, UIViewControllerTransitionin
         definesPresentationContext = true
         transitioningDelegate = self
     }
-
+    
     /// Subclass can override to provide its own presenting transition.
-    public func animationController(forPresentedController presented: UIViewController,
-                                                          presenting: UIViewController,
-                                                                               sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         toVc = presenting
         return PopupViewControllerTransition(fromVC: presenting, toVC: presented)
     }
 
+    
     /// Subclass can override to provide its own dismissal transition.
-    public func animationController(forDismissedController dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         if let toVc = toVc {
             let transition = PopupViewControllerTransition(fromVC: self, toVC: toVc)
             transition.presenting = false
@@ -153,14 +152,14 @@ public class PopupViewController: UIViewController, UIViewControllerTransitionin
     }
 
     /// Add an action to the PopupViewController. Add all your actions before presenting.
-    public func addAction(_ action: PopupAction) {
+    open func addAction(_ action: PopupAction) {
         actions.append(action)
     }
 
-    public override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = UIColor.black().withAlphaComponent(0.5)
+        view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
 
         view.addSubview(blurView)
         view.addSubview(alertView)
@@ -194,12 +193,12 @@ private class PopupViewControllerTransition: NSObject, UIViewControllerTransitio
         self.toVC = toVC
     }
 
-    @objc func transitionDuration(_ transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+    @objc func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.5
     }
 
-    @objc func animateTransition(_ transitionContext: UIViewControllerContextTransitioning) {
-        let containerView = transitionContext.containerView()
+    @objc func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+        let containerView = transitionContext.containerView
 
         if (presenting) {
             let alertController = toVC as! PopupViewController
@@ -209,7 +208,7 @@ private class PopupViewControllerTransition: NSObject, UIViewControllerTransitio
             alertController.view.alpha = 0
             alertController.alertView.layer.transform = CATransform3DMakeScale(0.2, 0.2, 0.2)
             alertController.blurView.layer.transform = CATransform3DMakeScale(0.2, 0.2, 0.2)
-            UIView.animate(withDuration: transitionDuration(transitionContext),
+            UIView.animate(withDuration: transitionDuration(using: transitionContext),
                                        delay: 0,
                                        usingSpringWithDamping: 0.8,
                                        initialSpringVelocity: 15,
@@ -226,13 +225,13 @@ private class PopupViewControllerTransition: NSObject, UIViewControllerTransitio
             })
         } else {
             let alertController = fromVC as! PopupViewController
-            UIView.animate(withDuration: transitionDuration(transitionContext),
+            UIView.animate(withDuration: transitionDuration(using: transitionContext),
                                        delay: 0,
                                        usingSpringWithDamping: 0.8,
                                        initialSpringVelocity: 15,
                                        options: UIViewAnimationOptions(),
                                        animations: {
-                                        alertController.view.backgroundColor = UIColor.clear()
+                                        alertController.view.backgroundColor = UIColor.clear
                                         alertController.alertView.layer.transform = CATransform3DMakeScale(0.01, 0.01, 0.01)
                                         alertController.blurView.layer.transform = CATransform3DMakeScale(0.01, 0.01, 0.01)
                 }, completion: { (completed) in
@@ -264,7 +263,7 @@ private class PopupAlertView: UIView {
         addSubview(titleLabel)
         addSubview(messageLabel)
 
-        backgroundColor = UIColor.clear()
+        backgroundColor = UIColor.clear
 
         titleLabel.font = customizable.titleFont
         titleLabel.textColor = customizable.titleColor
@@ -282,7 +281,7 @@ private class PopupAlertView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    private func addActions(_ actions: [PopupAction]) {
+    fileprivate func addActions(_ actions: [PopupAction]) {
 
         for action in actions {
 
@@ -320,7 +319,7 @@ private class PopupAlertView: UIView {
         }
     }
 
-    private override func updateConstraints() {
+    fileprivate override func updateConstraints() {
         super.updateConstraints()
 
         constrain(self, titleLabel) {view, label in
@@ -377,7 +376,7 @@ private class PopupAlertButton: UIButton {
         }
     }
 
-    private let topBorder = UIView(frame: CGRect.zero)
+    fileprivate let topBorder = UIView(frame: CGRect.zero)
 
     var action: PopupAction?
     var handler: ((PopupAlertButton) -> Void)?
@@ -425,7 +424,7 @@ private class PopupAlertButton: UIButton {
         }
     }
 
-    private override func updateConstraints() {
+    fileprivate override func updateConstraints() {
         constrain(self, topBorder){view, border in
             border.left == view.left
             border.right == view.right
@@ -436,13 +435,13 @@ private class PopupAlertButton: UIButton {
         super.updateConstraints()
     }
 
-    private override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    fileprivate override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
 
         hightlight = true
     }
 
-    private override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+    fileprivate override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
 
         hightlight = false
