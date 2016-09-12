@@ -32,6 +32,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/Dimillian/PopupViewController.git", :tag => "#{s.version}" }
   s.source_files  = "PopupViewController/PopupViewController/*.swift"
 
-  s.dependency pod 'Cartography', :git => 'https://github.com/wireapp/Cartography.git', :branch => 'swi'
+  s.dependency "Cartography", "~> 0.6"
 
 end
