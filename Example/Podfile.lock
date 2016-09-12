@@ -1,12 +1,22 @@
 PODS:
-  - Cartography (0.6.0)
+  - Cartography (0.5.0)
 
 DEPENDENCIES:
-  - Cartography
+  - Cartography (from `https://github.com/wireapp/Cartography.git`, branch `swift3`)
+
+EXTERNAL SOURCES:
+  Cartography:
+    :branch: swift3
+    :git: https://github.com/wireapp/Cartography.git
+
+CHECKOUT OPTIONS:
+  Cartography:
+    :commit: 78f81b658950ed2ad68669f883798fe8bbe7a6b4
+    :git: https://github.com/wireapp/Cartography.git
 
 SPEC CHECKSUMS:
-  Cartography: 70af183a248547694a8cfaa6b989cb7e04589985
+  Cartography: de3e85d2fc2d7288a2e7c89e1ac6cad08599d75e
 
-PODFILE CHECKSUM: 512f88be2177d89ae6c638fc7c3156c69d816402
+PODFILE CHECKSUM: 95d231f83bef56e64b47e4514b2ffbcdcc0e24b6
 
-COCOAPODS: 1.0.0
+COCOAPODS: 1.0.1

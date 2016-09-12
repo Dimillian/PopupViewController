@@ -4,10 +4,10 @@ workspace '../PopupViewController'
 
 target 'PopupViewController' do
   use_frameworks!
-  pod 'Cartography'
+  pod 'Cartography', :git => 'https://github.com/wireapp/Cartography.git', :branch => 'swift3'
 end
 
 target 'PopupViewControllerTests' do
   use_frameworks!
-  pod 'Cartography'
+  pod 'Cartography', :git => 'https://github.com/wireapp/Cartography.git', :branch => 'swift3'
 end
