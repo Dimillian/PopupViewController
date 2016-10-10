@@ -231,7 +231,7 @@ private class PopupViewControllerTransition: NSObject, UIViewControllerTransitio
                                        initialSpringVelocity: 15,
                                        options: UIViewAnimationOptions(),
                                        animations: {
-                                        alertController.view.backgroundColor = UIColor.clear
+                                        alertController.view.alpha = 0
                                         alertController.alertView.layer.transform = CATransform3DMakeScale(0.01, 0.01, 0.01)
                                         alertController.blurView.layer.transform = CATransform3DMakeScale(0.01, 0.01, 0.01)
                 }, completion: { (completed) in
