@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "PopupViewController"
-  s.version      = "0.1.3"
+  s.version      = "0.1.4"
   s.summary      = "Drop in replacement of UIAlertController with customization options"
   s.description  = <<-DESC
   Drop in replacement of UIAlertController with customization options"
