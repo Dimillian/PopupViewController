@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "PopupViewController"
-  s.version      = "0.1.0"
+  s.version      = "0.1.1"
   s.summary      = "Drop in replacement of UIAlertController with customization options"
   s.description  = <<-DESC
   Drop in replacement of UIAlertController with customization options"
@@ -32,6 +32,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/Dimillian/PopupViewController.git", :tag => "#{s.version}" }
   s.source_files  = "PopupViewController/PopupViewController/*.swift"
 
-  s.dependency "Cartography", "~> 0.6"
+  s.dependency "Cartography", "~> 1.0.1"
 
 end
