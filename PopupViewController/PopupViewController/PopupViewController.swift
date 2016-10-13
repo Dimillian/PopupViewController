@@ -80,10 +80,10 @@ open class PopupViewController: UIViewController, UIViewControllerTransitioningD
         }
     }
 
-    /// Default customizable used if you don't pass any. Can be set to a new one too
+    /// Default customizable used if you don't pass any. Can be set to a new one.
     static open var sharedCustomizable = Customizable()
 
-    /// Init this strict and set any properties to customize your alert view accordingly.
+    /// Init this struct and set any properties to customize your alert view accordingly.
     /// Must be passed in the init parameter.
     public struct Customizable {
         public var titleFont = UIFont.systemFont(ofSize: 17.0)
