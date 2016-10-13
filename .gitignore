@@ -63,3 +63,5 @@ fastlane/report.xml
 fastlane/screenshots
 
 .DS_Store
+
+Example/.DS_Store
